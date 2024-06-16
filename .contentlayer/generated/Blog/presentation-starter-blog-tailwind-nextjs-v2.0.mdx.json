@@ -36,7 +36,7 @@
   "toc": [
     {
       "value": "Introduction",
-      "url": "#introduction-9",
+      "url": "#introduction-10",
       "depth": 2
     },
     {
@@ -51,17 +51,17 @@
     },
     {
       "value": "Typescript First",
-      "url": "#typescript-first",
+      "url": "#typescript-first-1",
       "depth": 2
     },
     {
       "value": "Contentlayer",
-      "url": "#contentlayer",
+      "url": "#contentlayer-1",
       "depth": 2
     },
     {
       "value": "Pliny",
-      "url": "#pliny",
+      "url": "#pliny-1",
       "depth": 2
     },
     {
@@ -71,12 +71,12 @@
     },
     {
       "value": "Algolia",
-      "url": "#algolia",
+      "url": "#algolia-1",
       "depth": 3
     },
     {
       "value": "Kbar",
-      "url": "#kbar",
+      "url": "#kbar-1",
       "depth": 3
     },
     {
@@ -101,17 +101,17 @@
     },
     {
       "value": "Conclusion",
-      "url": "#conclusion",
+      "url": "#conclusion-1",
       "depth": 2
     },
     {
       "value": "Support",
-      "url": "#support-1",
+      "url": "#support-2",
       "depth": 2
     },
     {
       "value": "Licence",
-      "url": "#licence-1",
+      "url": "#licence-3",
       "depth": 2
     }
   ],

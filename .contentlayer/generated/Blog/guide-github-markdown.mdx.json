@@ -33,7 +33,7 @@
   "toc": [
     {
       "value": "Introduction",
-      "url": "#introduction-1",
+      "url": "#introduction",
       "depth": 1
     },
     {
@@ -48,7 +48,7 @@
     },
     {
       "value": "Headers",
-      "url": "#headers-1",
+      "url": "#headers",
       "depth": 2
     },
     {
@@ -88,12 +88,12 @@
     },
     {
       "value": "Images",
-      "url": "#images-1",
+      "url": "#images",
       "depth": 2
     },
     {
       "value": "Links",
-      "url": "#links-1",
+      "url": "#links",
       "depth": 2
     },
     {
