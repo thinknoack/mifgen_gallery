@@ -37,4 +37,4 @@ next-env.d.ts
 
 
 # images
-public/collection
+public/collection/*.png
