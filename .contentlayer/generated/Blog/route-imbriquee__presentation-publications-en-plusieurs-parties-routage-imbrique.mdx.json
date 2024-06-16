@@ -1,0 +1,66 @@
+{
+  "title": "Présentation des publications en plusieurs parties avec routage imbriqué",
+  "date": "2021-05-02T00:00:00.000Z",
+  "language": "fr",
+  "localeid": "nestedroutes",
+  "image": "/images/image-placeholder.png",
+  "categories": [
+    "code"
+  ],
+  "tags": [
+    "multi-auteurs",
+    "next-js",
+    "fonctionnalites"
+  ],
+  "draft": false,
+  "summary": "Le modèle de blog prend en charge les publications dans des sous-dossiers imbriqués. Cela peut être utilisé pour regrouper les publications de contenu similaire, par ex. un cours en plusieurs parties. Cet article est lui-même un exemple de routage imbriqué!",
+  "body": {
+    "raw": "\n# Routes imbriquées\n\nLe modèle de blog prend en charge les publications dans des sous-dossiers imbriqués. Cela aide à l'organisation et peut être utilisé pour regrouper des publications de contenu similaire, par ex. une série en plusieurs parties. Cet article est lui-même un exemple d'itinéraire imbriqué! Il se trouve dans le dossier `/data/blog/nested-route`.\n\n## Comment?\n\nSimplifiez la création de plusieurs dossiers dans le dossier principal `/data/blog` et ajoutez-y vos fichiers `.md`/`.mdx`. Vous pouvez même créer quelque chose comme `/data/blog/nested-route/deeply-nested-route/my-post.md`\n\nNous utilisons Next.js catch all routes pour gérer les créations de routage et de chemin.\n\n## Cas d'usage\n\nVoici quelques raisons d'utiliser des itinéraires imbriqués:\n\n- Organisation du contenu plus logique (les blogs seront toujours affichés en fonction de la date de création)\n- Articles en plusieurs parties\n- Différents sous-itinéraires pour chaque auteur\n- Internationalisation (bien qu'il serait recommandé d'utiliser le [routage i8n intégré à Next.js](https://nextjs.org/docs/advanced-features/i18n-routing))\n\n## Note\n\n- Les liens des articles précédents/suivants en bas du modèle sont actuellement triés par date. On pourrait envisager de modifier le modèle pour renvoyer le lecteur au message précédent/suivant de la série, plutôt que par date.\n",
+    "code": "var Component=(()=>{var h=Object.create;var s=Object.defineProperty;var p=Object.getOwnPropertyDescriptor;var m=Object.getOwnPropertyNames;var g=Object.getPrototypeOf,x=Object.prototype.hasOwnProperty;var f=(i,e)=>()=>(e||i((e={exports:{}}).exports,e),e.exports),b=(i,e)=>{for(var r in e)s(i,r,{get:e[r],enumerable:!0})},t=(i,e,r,l)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let n of m(e))!x.call(i,n)&&n!==r&&s(i,n,{get:()=>e[n],enumerable:!(l=p(e,n))||l.enumerable});return i};var w=(i,e,r)=>(r=i!=null?h(g(i)):{},t(e||!i||!i.__esModule?s(r,\"default\",{value:i,enumerable:!0}):r,i)),v=i=>t(s({},\"__esModule\",{value:!0}),i);var o=f((j,d)=>{d.exports=_jsx_runtime});var N={};b(N,{default:()=>u,frontmatter:()=>q});var a=w(o()),q={title:\"Pr\\xE9sentation des publications en plusieurs parties avec routage imbriqu\\xE9\",date:\"2021-05-02\",language:\"fr\",localeid:\"nestedroutes\",categories:[\"code\"],tags:[\"multi-auteurs\",\"next-js\",\"fonctionnalites\"],image:\"/images/image-placeholder.png\",draft:!1,summary:\"Le mod\\xE8le de blog prend en charge les publications dans des sous-dossiers imbriqu\\xE9s. Cela peut \\xEAtre utilis\\xE9 pour regrouper les publications de contenu similaire, par ex. un cours en plusieurs parties. Cet article est lui-m\\xEAme un exemple de routage imbriqu\\xE9!\"};function c(i){let e={a:\"a\",code:\"code\",h1:\"h1\",h2:\"h2\",li:\"li\",p:\"p\",path:\"path\",span:\"span\",svg:\"svg\",ul:\"ul\",...i.components};return(0,a.jsxs)(a.Fragment,{children:[(0,a.jsxs)(e.h1,{className:\"content-header\",id:\"routes-imbriqu\\xE9es\",children:[(0,a.jsx)(e.a,{href:\"#routes-imbriqu\\xE9es\",\"aria-hidden\":\"true\",tabIndex:\"-1\",children:(0,a.jsx)(a.Fragment,{children:(0,a.jsx)(e.span,{className:\"content-header-link\",children:(0,a.jsxs)(e.svg,{className:\"h-5 linkicon w-5\",fill:\"currentColor\",viewBox:\"0 0 20 20\",xmlns:\"http://www.w3.org/2000/svg\",children:[(0,a.jsx)(e.path,{d:\"M12.232 4.232a2.5 2.5 0 0 1 3.536 3.536l-1.225 1.224a.75.75 0 0 0 1.061 1.06l1.224-1.224a4 4 0 0 0-5.656-5.656l-3 3a4 4 0 0 0 .225 5.865.75.75 0 0 0 .977-1.138 2.5 2.5 0 0 1-.142-3.667l3-3Z\"}),(0,a.jsx)(e.path,{d:\"M11.603 7.963a.75.75 0 0 0-.977 1.138 2.5 2.5 0 0 1 .142 3.667l-3 3a2.5 2.5 0 0 1-3.536-3.536l1.225-1.224a.75.75 0 0 0-1.061-1.06l-1.224 1.224a4 4 0 1 0 5.656 5.656l3-3a4 4 0 0 0-.225-5.865Z\"})]})})})}),\"Routes imbriqu\\xE9es\"]}),(0,a.jsxs)(e.p,{children:[\"Le mod\\xE8le de blog prend en charge les publications dans des sous-dossiers imbriqu\\xE9s. Cela aide \\xE0 l'organisation et peut \\xEAtre utilis\\xE9 pour regrouper des publications de contenu similaire, par ex. une s\\xE9rie en plusieurs parties. Cet article est lui-m\\xEAme un exemple d'itin\\xE9raire imbriqu\\xE9! Il se trouve dans le dossier \",(0,a.jsx)(e.code,{children:\"/data/blog/nested-route\"}),\".\"]}),(0,a.jsxs)(e.h2,{className:\"content-header\",id:\"comment\",children:[(0,a.jsx)(e.a,{href:\"#comment\",\"aria-hidden\":\"true\",tabIndex:\"-1\",children:(0,a.jsx)(a.Fragment,{children:(0,a.jsx)(e.span,{className:\"content-header-link\",children:(0,a.jsxs)(e.svg,{className:\"h-5 linkicon w-5\",fill:\"currentColor\",viewBox:\"0 0 20 20\",xmlns:\"http://www.w3.org/2000/svg\",children:[(0,a.jsx)(e.path,{d:\"M12.232 4.232a2.5 2.5 0 0 1 3.536 3.536l-1.225 1.224a.75.75 0 0 0 1.061 1.06l1.224-1.224a4 4 0 0 0-5.656-5.656l-3 3a4 4 0 0 0 .225 5.865.75.75 0 0 0 .977-1.138 2.5 2.5 0 0 1-.142-3.667l3-3Z\"}),(0,a.jsx)(e.path,{d:\"M11.603 7.963a.75.75 0 0 0-.977 1.138 2.5 2.5 0 0 1 .142 3.667l-3 3a2.5 2.5 0 0 1-3.536-3.536l1.225-1.224a.75.75 0 0 0-1.061-1.06l-1.224 1.224a4 4 0 1 0 5.656 5.656l3-3a4 4 0 0 0-.225-5.865Z\"})]})})})}),\"Comment?\"]}),(0,a.jsxs)(e.p,{children:[\"Simplifiez la cr\\xE9ation de plusieurs dossiers dans le dossier principal \",(0,a.jsx)(e.code,{children:\"/data/blog\"}),\" et ajoutez-y vos fichiers \",(0,a.jsx)(e.code,{children:\".md\"}),\"/\",(0,a.jsx)(e.code,{children:\".mdx\"}),\". Vous pouvez m\\xEAme cr\\xE9er quelque chose comme \",(0,a.jsx)(e.code,{children:\"/data/blog/nested-route/deeply-nested-route/my-post.md\"})]}),(0,a.jsx)(e.p,{children:\"Nous utilisons Next.js catch all routes pour g\\xE9rer les cr\\xE9ations de routage et de chemin.\"}),(0,a.jsxs)(e.h2,{className:\"content-header\",id:\"cas-dusage\",children:[(0,a.jsx)(e.a,{href:\"#cas-dusage\",\"aria-hidden\":\"true\",tabIndex:\"-1\",children:(0,a.jsx)(a.Fragment,{children:(0,a.jsx)(e.span,{className:\"content-header-link\",children:(0,a.jsxs)(e.svg,{className:\"h-5 linkicon w-5\",fill:\"currentColor\",viewBox:\"0 0 20 20\",xmlns:\"http://www.w3.org/2000/svg\",children:[(0,a.jsx)(e.path,{d:\"M12.232 4.232a2.5 2.5 0 0 1 3.536 3.536l-1.225 1.224a.75.75 0 0 0 1.061 1.06l1.224-1.224a4 4 0 0 0-5.656-5.656l-3 3a4 4 0 0 0 .225 5.865.75.75 0 0 0 .977-1.138 2.5 2.5 0 0 1-.142-3.667l3-3Z\"}),(0,a.jsx)(e.path,{d:\"M11.603 7.963a.75.75 0 0 0-.977 1.138 2.5 2.5 0 0 1 .142 3.667l-3 3a2.5 2.5 0 0 1-3.536-3.536l1.225-1.224a.75.75 0 0 0-1.061-1.06l-1.224 1.224a4 4 0 1 0 5.656 5.656l3-3a4 4 0 0 0-.225-5.865Z\"})]})})})}),\"Cas d'usage\"]}),(0,a.jsx)(e.p,{children:\"Voici quelques raisons d'utiliser des itin\\xE9raires imbriqu\\xE9s:\"}),(0,a.jsxs)(e.ul,{children:[(0,a.jsx)(e.li,{children:\"Organisation du contenu plus logique (les blogs seront toujours affich\\xE9s en fonction de la date de cr\\xE9ation)\"}),(0,a.jsx)(e.li,{children:\"Articles en plusieurs parties\"}),(0,a.jsx)(e.li,{children:\"Diff\\xE9rents sous-itin\\xE9raires pour chaque auteur\"}),(0,a.jsxs)(e.li,{children:[\"Internationalisation (bien qu'il serait recommand\\xE9 d'utiliser le \",(0,a.jsx)(e.a,{href:\"https://nextjs.org/docs/advanced-features/i18n-routing\",children:\"routage i8n int\\xE9gr\\xE9 \\xE0 Next.js\"}),\")\"]})]}),(0,a.jsxs)(e.h2,{className:\"content-header\",id:\"note\",children:[(0,a.jsx)(e.a,{href:\"#note\",\"aria-hidden\":\"true\",tabIndex:\"-1\",children:(0,a.jsx)(a.Fragment,{children:(0,a.jsx)(e.span,{className:\"content-header-link\",children:(0,a.jsxs)(e.svg,{className:\"h-5 linkicon w-5\",fill:\"currentColor\",viewBox:\"0 0 20 20\",xmlns:\"http://www.w3.org/2000/svg\",children:[(0,a.jsx)(e.path,{d:\"M12.232 4.232a2.5 2.5 0 0 1 3.536 3.536l-1.225 1.224a.75.75 0 0 0 1.061 1.06l1.224-1.224a4 4 0 0 0-5.656-5.656l-3 3a4 4 0 0 0 .225 5.865.75.75 0 0 0 .977-1.138 2.5 2.5 0 0 1-.142-3.667l3-3Z\"}),(0,a.jsx)(e.path,{d:\"M11.603 7.963a.75.75 0 0 0-.977 1.138 2.5 2.5 0 0 1 .142 3.667l-3 3a2.5 2.5 0 0 1-3.536-3.536l1.225-1.224a.75.75 0 0 0-1.061-1.06l-1.224 1.224a4 4 0 1 0 5.656 5.656l3-3a4 4 0 0 0-.225-5.865Z\"})]})})})}),\"Note\"]}),(0,a.jsx)(e.ul,{children:(0,a.jsx)(e.li,{children:\"Les liens des articles pr\\xE9c\\xE9dents/suivants en bas du mod\\xE8le sont actuellement tri\\xE9s par date. On pourrait envisager de modifier le mod\\xE8le pour renvoyer le lecteur au message pr\\xE9c\\xE9dent/suivant de la s\\xE9rie, plut\\xF4t que par date.\"})})]})}function u(i={}){let{wrapper:e}=i.components||{};return e?(0,a.jsx)(e,{...i,children:(0,a.jsx)(c,{...i})}):c(i)}return v(N);})();\n;return Component;"
+  },
+  "_id": "route-imbriquee/presentation-publications-en-plusieurs-parties-routage-imbrique.mdx",
+  "_raw": {
+    "sourceFilePath": "route-imbriquee/presentation-publications-en-plusieurs-parties-routage-imbrique.mdx",
+    "sourceFileName": "presentation-publications-en-plusieurs-parties-routage-imbrique.mdx",
+    "sourceFileDir": "route-imbriquee",
+    "contentType": "mdx",
+    "flattenedPath": "route-imbriquee/presentation-publications-en-plusieurs-parties-routage-imbrique"
+  },
+  "type": "Blog",
+  "readingTime": "1 Minute",
+  "slug": "presentation-publications-en-plusieurs-parties-routage-imbrique",
+  "path": "route-imbriquee/presentation-publications-en-plusieurs-parties-routage-imbrique",
+  "filePath": "route-imbriquee/presentation-publications-en-plusieurs-parties-routage-imbrique.mdx",
+  "toc": [
+    {
+      "value": "Routes imbriquées",
+      "url": "#routes-imbriquées",
+      "depth": 1
+    },
+    {
+      "value": "Comment?",
+      "url": "#comment",
+      "depth": 2
+    },
+    {
+      "value": "Cas d'usage",
+      "url": "#cas-dusage",
+      "depth": 2
+    },
+    {
+      "value": "Note",
+      "url": "#note-1",
+      "depth": 2
+    }
+  ],
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Présentation des publications en plusieurs parties avec routage imbriqué",
+    "datePublished": "2021-05-02T00:00:00.000Z",
+    "dateModified": "2021-05-02T00:00:00.000Z",
+    "description": "Le modèle de blog prend en charge les publications dans des sous-dossiers imbriqués. Cela peut être utilisé pour regrouper les publications de contenu similaire, par ex. un cours en plusieurs parties. Cet article est lui-même un exemple de routage imbriqué!",
+    "image": "/",
+    "url": "https://pablo-pikassiet-next-starter-i18n.vercel.app/route-imbriquee/presentation-publications-en-plusieurs-parties-routage-imbrique"
+  }
+}
