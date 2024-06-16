@@ -48,7 +48,7 @@
     "en": "release-of-tailwind-nextjs-starter-blog-v2.0"
   },
   "nestedroutes": {
-    "en": "introducing-multi-part-posts-with-nested-routing",
-    "fr": "presentation-publications-en-plusieurs-parties-routage-imbrique"
+    "fr": "presentation-publications-en-plusieurs-parties-routage-imbrique",
+    "en": "introducing-multi-part-posts-with-nested-routing"
   }
 }
