@@ -1,68 +1,128 @@
-<h1 align=center>Nextjs + Tailwind CSS + TypeScript Starter and Boilerplate</h1>
+# Next.js GitHub Pages
 
-<p align=center>Pablo Pikassiet I18n is a free starter template built with Nextjs, TailwindCSS & TypeScript, providing everything you need to jumpstart your artist Next project and save valuable time.</p>
+Deploy Next.js to GitHub Pages with GitHub Actions. [View the deployed app](https://gregrickaby.github.io/nextjs-github-pages/) 🚀
 
-<p align=center>Made with ♥ by<a href="https://www.pxlsyl.art"> PxlSyl</a></p>
-<p align=center> If you find this project useful, please give it a ⭐ to show your support. </p>
+Now with Next.js App Router support! If you need Pages Router support [click here](https://github.com/gregrickaby/nextjs-github-pages/releases/tag/pages_dir).
 
-## Introduction
+> ⚠️ Heads up! GitHub Pages _does not_ support serverless or edge functions. This means dynamic functionality will be disabled. See all the [unsupported features](https://nextjs.org/docs/app/building-your-application/deploying/static-exports#unsupported-features).
 
-This artist starter template is a very hard fork from Nextplate and Tailwind Next Starter Blog, mixed together with my own ideas.
+---
 
-## Note
+## Configure Next.js
 
-I don't have that much time so I need help to write and replace some posts for the doc, for testing and debugging, and even for news ideas if you have some. Feel free to open issues or make pr!
+### Next.js Config
 
-## Features
+First, you need to configure Next.js to [deploy static exports](https://nextjs.org/docs/app/building-your-application/deploying/static-exports). This is required for GitHub Pages to work.
 
-- All best features from [Nextplate](https://github.com/zeon-studio/nextplate)
-- All best features from [Tailwind Next Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog)
-- All best features, ideas and improvments from my own project and website.
+1. Open the `next.config.mjs` file
+2. Add the following:
 
-This means :
+```js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  /**
+   * Enable static exports for the App Router.
+   *
+   * @see https://nextjs.org/docs/app/building-your-application/deploying/static-exports
+   */
+  output: "export",
 
-- Next.js with Typescript
-- Easy styling customization with Tailwind 3.0
-- Framermotion for smooth page transitions
-- Great advanced menu bar
-- Two swiper galleries to showcase your art
-- Complete music application for your listeners
-- Beautiful contact form
-- MD/MDX to manage your pages : write and update content in Markdown / MDX
-- Contentlayer to manage blog content logic
-- Near perfect lighthouse score
-- Mobile-friendly view & fully responsive on all devices
-- Light and dark theme
-- Font optimization with next/font
-- Integration with pliny that provides:
-  Multiple analytics options including Umami, Plausible, Simple Analytics, Posthog and Google Analytics
-- Comments via Giscus, Utterances or Disqus
-- Newsletter API and component with support for Mailchimp, Buttondown, Convertkit, Klaviyo, Revue, and Emailoctopus
-- Command palette search with Kbar or Algolia
-- Server-side syntax highlighting with line numbers and line highlighting via rehype-prism-plus
-- Math display supported via KaTeX
-- Citation and bibliography support via rehype-citation
-- Automatic image optimization via next/image
-- Support for tags - each unique tag will be its own page, + pagination and subpagination
-- Support for categories - each unique category will be its own page, + pagination and subpagination
-- Support for main author page, + dedicated page for multiple authors
-- Similar posts suggestion
-- 4 different blog layouts
-- Projects page
-- Opengraph protocol support for metadata
-- Preconfigured security headers
-- SEO friendly with RSS feed, sitemaps and more!
-- Terms and Legal notice preconfigured pages
-- Open-source and free for personal and commercial use
+  /**
+   * Set base path. This is the slug of your GitHub repository.
+   *
+   * @see https://nextjs.org/docs/app/api-reference/next-config-js/basePath
+   */
+  basePath: "/nextjs-github-pages",
 
-My own website based on this new template:
+  /**
+   * Disable server-based image optimization. Next.js does not support
+   * dynamic features with static exports.
+   *
+   * @see https://nextjs.org/docs/app/api-reference/components/image#unoptimized
+   */
+  images: {
+    unoptimized: true,
+  },
+};
 
-- [PxlSyl.art](https://www.pxlsyl.art/)
+export default nextConfig;
+```
 
-## License
+3. Save the `next.config.mjs`
 
-Copyright (c) 2023 - Present, Designed & Developed by [PxlSyl](https://www.pxlsyl.art/fr)
+4. Finally, place a `.nojekyll` file in the `/public` directory to disable GitHub Pages from trying to create a [Jekyll](https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/) website.
 
-**Image and music license:** The images are only for demonstration purposes. They have their license, I don't have permission to share those images.
+```treeview
+.
+├── app/
+├── public/
+│   └── .nojekyll
+├── next.config.js
+```
 
-The images from the drawing galleries come from my own artworks, as well for the musics in the music player : all rights reserved.
+Perfect! This is all you need to configure Next.js to deploy on GitHub Pages.
+
+### Add base path to `page.tsx`
+
+Next, you will need to add the base path to images in `page.tsx` file. This is required for the images to appear on GitHub Pages.
+
+1. Open `app/page.tsx`
+2. Find the `Image` components
+3. Add `/nextjs-github-pages/` (or the slug of your GitHub repository) to the `src` prop:
+
+```tsx[class="line-numbers"]
+   <Image
+     src="/nextjs-github-pages/vercel.svg"
+     alt="Vercel Logo"
+     className={styles.vercelLogo}
+     width={100}
+     height={24}
+     priority
+   />
+```
+
+4. Save the `page.tsx` file
+
+Learn more by reading the official documentation [for basePath and images](https://nextjs.org/docs/app/api-reference/next-config-js/basePath#images).
+
+---
+
+## Configure GitHub Repository
+
+Next you need to configure Github for automated deployments via GitHub Actions.
+
+### Enable GitHub Pages
+
+The following settings use the [Github Action Deploy Pages](https://github.com/actions/deploy-pages) to deploy. I prefer this workflow because you don't need to generate SSH keys or use a personal access token.
+
+1. Go to your repository's **Settings** tab
+2. Click "Pages" in the sidebar
+3. Under "Build and Deployment", select "GitHub Actions" as the source:
+
+![screenshot of github pages settings](https://github.com/gregrickaby/nextjs-github-pages/assets/200280/a5f757c3-f515-4ca2-aadf-d2979c2c3bf5)
+
+### Setup GitHub Action
+
+This is where the magic happens! This [workflow file](https://github.com/gregrickaby/nextjs-github-pages/blob/main/.github/workflows/deploy.yml) will automatically build and deploy the app when you push to the `main` branch.
+
+1. Create `.github/workflows/deploy.yml` file
+2. Paste the contents of <https://github.com/gregrickaby/nextjs-github-pages/blob/main/.github/workflows/deploy.yml>
+3. Save the `deploy.yml` file
+
+### Push to GitHub
+
+Now that everything is configured, you can commit your code and push to GitHub. This will trigger the GitHub Action workflow and deploy your app to GitHub Pages.
+
+```bash
+git add . && git commit -m "Initial commit" && git push
+```
+
+You should see your site deployed to GitHub Pages in a few minutes. 🚀
+
+---
+
+## Wrap up
+
+Thanks for reading and I hope this helps. If you noticed someting wrong, please [file an issue](https://github.com/gregrickaby/nextjs-github-pages/issues). Good luck! 🍻
+
+---
