@@ -1,0 +1,27 @@
+.focus-outline {
+  outline: none;
+  box-shadow: 0px 0px 2px 1px rgb(66, 0, 0);
+}
+.images-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+
+  .image-list {
+    max-width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: calc(100vh - 50px);
+    overflow-y: scroll;
+    padding: 10px;
+    > div {
+      background-color: #333;
+      color: #fff;
+    }
+  }
+  .image-full {
+    max-width: 35%;
+    min-width: 35%;
+    padding: 0 50px 50px 0;
+  }
+}
