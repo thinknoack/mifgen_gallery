@@ -1,6 +1,6 @@
 'use client'
 
-import imageData from './metadata.json'
+import imageData from '../../public/metadata.json'
 import React, { useEffect, useState } from 'react'
 import { Images } from './images'
 import { ImageCardVisible } from './imageCardVisible'
@@ -11,20 +11,19 @@ interface Image {
   edition: number
   image: string
   name: string
+  attributes: Array<string>
 }
 
 const MemoizedImages = React.memo(Images)
 
 export default function ImageGallery(): JSX.Element {
-  const [edition, setId] = useState<number>(0)
+  const [id, setId] = useState<number>(0)
   const [isFull, setIsFull] = useState<boolean>(false)
-  const [isSearch, setIsSearch] = useState<boolean>(false)
-  const [search, setSearch] = useState<string>('')
   const [windowWidth, setWindowWidth] = useState<number>(
     typeof window !== 'undefined' ? window.innerWidth : 0
   )
 
-  const [images, setMusics] = useState<Image[]>([])
+  const [images, setImages] = useState<Image[]>([])
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
@@ -41,7 +40,7 @@ export default function ImageGallery(): JSX.Element {
   }
 
   useEffect(() => {
-    setMusics(imageData)
+    setImages(imageData)
     setIsLoading(false)
   }, [])
 
@@ -52,10 +51,11 @@ export default function ImageGallery(): JSX.Element {
           images.map((image) => (
             <ImageCardVisible
               key={image.edition}
-              id={edition}
+              id={id}
               imageId={image.edition}
               img={image.image}
               name={image.name}
+              attributes={image.attributes}
             />
           ))}
         <h1 className="pt-5 text-center">Mifella Genesis</h1>
@@ -72,10 +72,8 @@ export default function ImageGallery(): JSX.Element {
               name={image.name}
               setId={setId}
               imageId={image.edition}
-              id={edition}
+              id={id}
               isFull={isFull}
-              isSearch={isSearch}
-              search={search}
               windowWidth={windowWidth}
             />
           ))}

@@ -6,8 +6,6 @@ type Props = {
   imageId: number
   id: number
   isFull: boolean
-  isSearch: boolean
-  search: string
   windowWidth: number
   setId: (e: number) => void
 }

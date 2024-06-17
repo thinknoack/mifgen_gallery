@@ -5,9 +5,20 @@ interface ImageCardVisibleProps {
   imageId: number
   img: string
   name: string
+  attributes: Array<string>
+}
+interface Attribute {
+  trait_type: string
+  value: string
 }
 
-export const ImageCardVisible = ({ id, imageId, img, name }: ImageCardVisibleProps) => {
+export const ImageCardVisible = ({
+  id,
+  imageId,
+  img,
+  name,
+  attributes,
+}: ImageCardVisibleProps) => {
   return (
     <>
       {imageId === id && (
@@ -22,6 +33,21 @@ export const ImageCardVisible = ({ id, imageId, img, name }: ImageCardVisiblePro
             />
           </div>
           <span>{name}</span>
+          <span>
+            {attributes &&
+              attributes.map((attribute) => (
+                <>
+                  <span>
+                    {attribute.trait_type}
+                    {': '}
+                  </span>
+                  <span>
+                    <strong>{attribute.value}</strong>
+                    {', '}
+                  </span>
+                </>
+              ))}
+          </span>
         </div>
       )}
     </>
