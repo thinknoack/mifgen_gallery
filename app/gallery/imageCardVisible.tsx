@@ -26,8 +26,8 @@ export const ImageCardVisible = ({
           <div className="aspect-w-1 aspect-h-1 overflow-hidden">
             <Image
               src={img}
-              width="1080"
-              height="1338"
+              width="650"
+              height="800"
               style={{ objectFit: 'cover' }}
               alt="TrackCover"
             />
