@@ -73,7 +73,7 @@ export default function ImageGallery(): JSX.Element {
           images &&
           DataList.map((image) =>
             image.attributes
-              ?.filter((qList) => qList.value?.toLowerCase().includes(trait))
+              ?.filter((qList) => qList.value?.includes(trait))
               ?.map((filteredList) => (
                 <MemoizedImages
                   key={image.edition}
@@ -102,20 +102,23 @@ export default function ImageGallery(): JSX.Element {
             />
           ))}
       </div>
-      <div className="image-info">
-        <div
-          className="mb-3 mr-3 flex cursor-pointer flex-col items-center justify-center "
-          onClick={clearTrait}
-          role="button"
-          tabIndex={0}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter') {
-              clearTrait()
-            }
-          }}
-        >
-          Clear
-        </div>
+
+      <div className="filter-info">
+        {trait ? (
+          <div
+            className="mb-3 mr-3 flex cursor-pointer flex-col items-center justify-center clear-button"
+            onClick={clearTrait}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                clearTrait()
+              }
+            }}
+          >
+            Clear
+          </div>
+        ) : null}
         {trait == '' &&
           TraitList.map((trait, index) => (
             <Trait key={index} name={trait.trait} setTrait={setTrait} />

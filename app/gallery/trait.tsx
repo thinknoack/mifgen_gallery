@@ -14,7 +14,7 @@ export const Trait = ({ name, setTrait }: TraitCardProps): JSX.Element => {
 
   return (
     <div
-      className={`mb-3 mr-3 flex cursor-pointer flex-col items-center justify-center border ${
+      className={`mb-3 mr-3 flex cursor-pointer flex-col items-center justify-center filter-button ${
         isFocused ? 'focus-outline' : ''
       }`}
       onClick={handleClick}
