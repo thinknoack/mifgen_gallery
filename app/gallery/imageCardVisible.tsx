@@ -26,28 +26,13 @@ export const ImageCardVisible = ({
           <div className="aspect-w-1 aspect-h-1 overflow-hidden">
             <Image
               src={img}
-              width="650"
-              height="800"
+              width="600"
+              height="600"
               style={{ objectFit: 'cover' }}
               alt="TrackCover"
             />
           </div>
           <span>{name}</span>
-          <span>
-            {attributes &&
-              attributes.map((attribute) => (
-                <>
-                  <span>
-                    {attribute.trait_type}
-                    {': '}
-                  </span>
-                  <span>
-                    <strong>{attribute.value}</strong>
-                    {', '}
-                  </span>
-                </>
-              ))}
-          </span>
         </div>
       )}
     </>

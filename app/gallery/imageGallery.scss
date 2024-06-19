@@ -7,7 +7,7 @@
   flex-wrap: nowrap;
 
   .image-list {
-    max-width: 75%;
+    max-width: calc(60% - 200px);
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
@@ -20,8 +20,18 @@
     }
   }
   .image-full {
-    max-width: 35%;
-    min-width: 35%;
+    max-width: 40%;
+    min-width: 40%;
     padding: 0 50px 50px 0;
+  }
+
+  .image-info {
+    max-width: 200px;
+    overflow: hidden;
+    height: calc(100vh - 50px);
+    overflow-y: scroll;
+    > div {
+      width: 100%;
+    }
   }
 }

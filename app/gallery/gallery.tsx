@@ -1,9 +1,11 @@
 'use client'
-
+import { DataList } from '../../public/metadata.js'
+import { TraitList } from '../../public/TraitList.js'
 import imageData from '../../public/metadata.json'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useCallback, useState } from 'react'
 import { Images } from './images'
 import { ImageCardVisible } from './imageCardVisible'
+import { Trait } from './trait'
 
 import './imageGallery.scss'
 
@@ -24,6 +26,7 @@ export default function ImageGallery(): JSX.Element {
   )
 
   const [images, setImages] = useState<Image[]>([])
+  const [trait, setTrait] = useState<string>('')
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
@@ -43,7 +46,9 @@ export default function ImageGallery(): JSX.Element {
     setImages(imageData)
     setIsLoading(false)
   }, [])
-
+  const clearTrait = useCallback(() => {
+    setTrait('')
+  }, [setTrait])
   return (
     <div className="images-wrapper">
       <div className="image-full">
@@ -64,7 +69,26 @@ export default function ImageGallery(): JSX.Element {
         </p>
       </div>
       <div className="image-list">
-        {images &&
+        {trait &&
+          images &&
+          DataList.map((image) =>
+            image.attributes
+              ?.filter((qList) => qList.value?.toLowerCase().includes(trait))
+              ?.map((filteredList) => (
+                <MemoizedImages
+                  key={image.edition}
+                  img={image.image}
+                  name={image.name}
+                  setId={setId}
+                  imageId={image.edition}
+                  id={id}
+                  isFull={isFull}
+                  windowWidth={windowWidth}
+                />
+              ))
+          )}
+        {!trait &&
+          images &&
           images.map((image) => (
             <MemoizedImages
               key={image.edition}
@@ -76,6 +100,25 @@ export default function ImageGallery(): JSX.Element {
               isFull={isFull}
               windowWidth={windowWidth}
             />
+          ))}
+      </div>
+      <div className="image-info">
+        <div
+          className="mb-3 mr-3 flex cursor-pointer flex-col items-center justify-center "
+          onClick={clearTrait}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              clearTrait()
+            }
+          }}
+        >
+          Clear
+        </div>
+        {trait == '' &&
+          TraitList.map((trait, index) => (
+            <Trait key={index} name={trait.trait} setTrait={setTrait} />
           ))}
       </div>
     </div>
