@@ -225,11 +225,6 @@ export const TraitList = [
     occurrence: '23 in 4500 editions (0.51 %)',
   },
   {
-    trait: 'none',
-    weight: '200',
-    occurrence: '4351 in 4500 editions (96.69 %)',
-  },
-  {
     trait: 'pray1',
     weight: '5',
     occurrence: '98 in 4500 editions (2.18 %)',
@@ -243,11 +238,6 @@ export const TraitList = [
     trait: 'blue gradient',
     weight: '1',
     occurrence: '28 in 4500 editions (0.62 %)',
-  },
-  {
-    trait: 'none',
-    weight: '120',
-    occurrence: '4436 in 4500 editions (98.58 %)',
   },
   {
     trait: 'red gradient',
@@ -265,11 +255,6 @@ export const TraitList = [
     occurrence: '98 in 4500 editions (2.18 %)',
   },
   {
-    trait: 'none',
-    weight: '120',
-    occurrence: '4304 in 4500 editions (95.64 %)',
-  },
-  {
     trait: 'red fence',
     weight: '2',
     occurrence: '67 in 4500 editions (1.49 %)',
@@ -278,11 +263,6 @@ export const TraitList = [
     trait: 'cathedral outlines',
     weight: '1',
     occurrence: '37 in 4500 editions (0.82 %)',
-  },
-  {
-    trait: 'none',
-    weight: '100',
-    occurrence: '4463 in 4500 editions (99.18 %)',
   },
   {
     trait: 'Tauba1',
@@ -940,11 +920,6 @@ export const TraitList = [
     occurrence: '172 in 4500 editions (3.82 %)',
   },
   {
-    trait: 'none',
-    weight: '90',
-    occurrence: '1313 in 4500 editions (29.18 %)',
-  },
-  {
     trait: 'angels1',
     weight: '30',
     occurrence: '463 in 4500 editions (10.29 %)',
@@ -995,19 +970,9 @@ export const TraitList = [
     occurrence: '137 in 4500 editions (3.04 %)',
   },
   {
-    trait: 'none',
-    weight: '90',
-    occurrence: '1323 in 4500 editions (29.40 %)',
-  },
-  {
     trait: 'Tiefling Good',
     weight: '1',
     occurrence: '46 in 4500 editions (1.02 %)',
-  },
-  {
-    trait: 'none',
-    weight: '110',
-    occurrence: '4454 in 4500 editions (98.98 %)',
   },
   {
     trait: 'MIF body1',
@@ -1575,19 +1540,9 @@ export const TraitList = [
     occurrence: '7 in 4500 editions (0.16 %)',
   },
   {
-    trait: 'none',
-    weight: '340',
-    occurrence: '4480 in 4500 editions (99.56 %)',
-  },
-  {
     trait: 'Ruby drips',
     weight: '1',
     occurrence: '32 in 4500 editions (0.71 %)',
-  },
-  {
-    trait: 'none',
-    weight: '110',
-    occurrence: '4468 in 4500 editions (99.29 %)',
   },
   {
     trait: 'HDaze skulpture Good',
@@ -1610,11 +1565,6 @@ export const TraitList = [
     occurrence: '594 in 4500 editions (13.20 %)',
   },
   {
-    trait: 'none',
-    weight: '90',
-    occurrence: '2780 in 4500 editions (61.78 %)',
-  },
-  {
     trait: 'stairs angel',
     weight: '10',
     occurrence: '318 in 4500 editions (7.07 %)',
@@ -1628,11 +1578,6 @@ export const TraitList = [
     trait: 'noface id',
     weight: '1',
     occurrence: '77 in 4500 editions (1.71 %)',
-  },
-  {
-    trait: 'none',
-    weight: '60',
-    occurrence: '3909 in 4500 editions (86.87 %)',
   },
   {
     trait: 'whore ship good',
@@ -1655,11 +1600,6 @@ export const TraitList = [
     occurrence: '17 in 4500 editions (0.38 %)',
   },
   {
-    trait: 'none',
-    weight: '250',
-    occurrence: '4464 in 4500 editions (99.20 %)',
-  },
-  {
     trait: 'Jumpman',
     weight: '15',
     occurrence: '525 in 4500 editions (11.67 %)',
@@ -1668,11 +1608,6 @@ export const TraitList = [
     trait: 'cray',
     weight: '10',
     occurrence: '382 in 4500 editions (8.49 %)',
-  },
-  {
-    trait: 'none',
-    weight: '100',
-    occurrence: '3528 in 4500 editions (78.40 %)',
   },
   {
     trait: 'teen help',
@@ -1705,11 +1640,6 @@ export const TraitList = [
     occurrence: '79 in 4500 editions (1.76 %)',
   },
   {
-    trait: 'none',
-    weight: '40',
-    occurrence: '3157 in 4500 editions (70.16 %)',
-  },
-  {
     trait: 'rag hands',
     weight: '1',
     occurrence: '78 in 4500 editions (1.73 %)',
@@ -1738,11 +1668,6 @@ export const TraitList = [
     trait: 'Tiefling evil',
     weight: '3',
     occurrence: '99 in 4500 editions (2.20 %)',
-  },
-  {
-    trait: 'none',
-    weight: '110',
-    occurrence: '3555 in 4500 editions (79.00 %)',
   },
   {
     trait: 'stairs reaper',
@@ -1778,11 +1703,6 @@ export const TraitList = [
     trait: 'jesusfang',
     weight: '1',
     occurrence: '27 in 4500 editions (0.60 %)',
-  },
-  {
-    trait: 'none',
-    weight: '90',
-    occurrence: '2878 in 4500 editions (63.96 %)',
   },
   {
     trait: 'rose',
@@ -1825,11 +1745,6 @@ export const TraitList = [
     occurrence: '473 in 4500 editions (10.51 %)',
   },
   {
-    trait: 'none',
-    weight: '120',
-    occurrence: '2783 in 4500 editions (61.84 %)',
-  },
-  {
     trait: 'tombstone',
     weight: '15',
     occurrence: '350 in 4500 editions (7.78 %)',
@@ -1850,11 +1765,6 @@ export const TraitList = [
     occurrence: '101 in 4500 editions (2.24 %)',
   },
   {
-    trait: 'none',
-    weight: '380',
-    occurrence: '4207 in 4500 editions (93.49 %)',
-  },
-  {
     trait: 'youngboymif',
     weight: '17',
     occurrence: '174 in 4500 editions (3.87 %)',
@@ -1868,11 +1778,6 @@ export const TraitList = [
     trait: 'cathedral outlines overlay1',
     weight: '1',
     occurrence: '16 in 4500 editions (0.36 %)',
-  },
-  {
-    trait: 'none',
-    weight: '290',
-    occurrence: '4188 in 4500 editions (93.07 %)',
   },
   {
     trait: 'pokedex',
@@ -1900,11 +1805,6 @@ export const TraitList = [
     occurrence: '186 in 4500 editions (4.13 %)',
   },
   {
-    trait: 'none',
-    weight: '300',
-    occurrence: '4150 in 4500 editions (92.22 %)',
-  },
-  {
     trait: 'razorwire',
     weight: '1',
     occurrence: '16 in 4500 editions (0.36 %)',
@@ -1930,11 +1830,6 @@ export const TraitList = [
     occurrence: '13 in 4500 editions (0.29 %)',
   },
   {
-    trait: 'none',
-    weight: '280',
-    occurrence: '4453 in 4500 editions (98.96 %)',
-  },
-  {
     trait: 'Genesis chain',
     weight: '1',
     occurrence: '25 in 4500 editions (0.56 %)',
@@ -1950,11 +1845,6 @@ export const TraitList = [
     occurrence: '36 in 4500 editions (0.80 %)',
   },
   {
-    trait: 'none',
-    weight: '150',
-    occurrence: '4409 in 4500 editions (97.98 %)',
-  },
-  {
     trait: 'Genesis',
     weight: '1',
     occurrence: '43 in 4500 editions (0.96 %)',
@@ -1963,11 +1853,6 @@ export const TraitList = [
     trait: 'mifella2',
     weight: '1',
     occurrence: '37 in 4500 editions (0.82 %)',
-  },
-  {
-    trait: 'none',
-    weight: '100',
-    occurrence: '4420 in 4500 editions (98.22 %)',
   },
   {
     trait: 'attack therapy',
@@ -1980,11 +1865,6 @@ export const TraitList = [
     occurrence: '8 in 4500 editions (0.18 %)',
   },
   {
-    trait: 'none',
-    weight: '240',
-    occurrence: '4478 in 4500 editions (99.51 %)',
-  },
-  {
     trait: 'flame frame',
     weight: '1',
     occurrence: '16 in 4500 editions (0.36 %)',
@@ -1993,10 +1873,5 @@ export const TraitList = [
     trait: 'hot topic',
     weight: '1',
     occurrence: '14 in 4500 editions (0.31 %)',
-  },
-  {
-    trait: 'none',
-    weight: '240',
-    occurrence: '4470 in 4500 editions (99.33 %)',
   },
 ]
